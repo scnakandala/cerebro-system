@@ -24,8 +24,8 @@ install: clean
 
 publish: clean build
 	python3 -m pip install --user --upgrade twine
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-	#twine upload dist/*
+	#twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	twine upload dist/*
 
 gen-docs:
 	cd docs-src && rm -rf build/* && make html && cp -r build/html/* ../docs && cd ..
