@@ -26,7 +26,7 @@ packages = find_packages()
 assert packages
 
 # read version from the package file.
-version_str = '0.1.0'
+version_str = '1.0.0'
 with (open(os.path.join(this, 'cerebro/__init__.py'), "r")) as f:
     line = [_ for _ in [_.strip("\r\n ")
                                 for _ in f.readlines()] if _.startswith("__version__")]
@@ -41,7 +41,7 @@ setup(
     license='Apache License 2.0',
     author='Supun Nakandala',
     author_email='snakanda@eng.ucsd.edu',
-    url='',
+    url='https://github.com/ADALabUCSD/cerebro-system',
     packages=packages,
     include_package_data=True,
     install_requires=requirements,
